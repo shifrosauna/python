@@ -19,3 +19,30 @@
 # “количество”: [5, 2, 7],
 # “ед”: [“шт.”]
 # }
+
+products_list = []
+i = 1
+condition = 'да'
+
+while condition == 'да':
+    name = input("Ведите название товара:")
+    price = input("Ведите цену товара:")
+    amount = input("Ведите количество товара:")
+    unit = input("Ведите единицу измерения товара:")
+    products_list.append((i, {"название": name, "цена": price, "количество": amount, "ед": unit}))
+    i += 1
+    condition = input("Если хотите добавить еще товар наберите 'да', иначе любой другой символ:")
+print(products_list)
+
+name_list = []
+price_list = []
+amount_list = []
+unit_list = []
+for value in products_list:
+    name_list.append(value[1].get('название'))
+    price_list.append(value[1].get('цена'))
+    amount_list.append(value[1].get('количество'))
+    unit_list.append(value[1].get('ед'))
+
+analityc_list = {"название": name_list, "цена": price_list, "количество": amount_list, "ед": unit_list}
+print(analityc_list)
