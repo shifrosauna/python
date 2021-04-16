@@ -10,7 +10,7 @@
 # Выполните доступ к атрибутам, выведите результат.
 # Выполните вызов методов и также покажите результат.
 class Car:
-    direction = 'едит прямо!'
+    direction = 'едет прямо!'
 
     def __init__(self, speed, color, name, is_police):
         self.speed = speed
@@ -26,7 +26,7 @@ class Car:
         return f'{self.name} остановилась.'
 
     def turn(self):
-        if self.direction == 'едит прямо!':
+        if self.direction == 'едет прямо!':
             return f'{self.name} {self.direction}'
         else:
             return f'{self.name} повернула на {self.direction}'
